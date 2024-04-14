@@ -44,7 +44,7 @@ h2, h3{
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -63,7 +63,7 @@ h2, h3{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
@@ -97,4 +97,13 @@ h2, h3{
 .input-group label, .input-group input {
     display: block; /* Makes label and input take up the full width of their container */
     text-align: left; /* Ensures text is left-aligned */
+}
+
+.user-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
 }

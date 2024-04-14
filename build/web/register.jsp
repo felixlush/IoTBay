@@ -20,22 +20,14 @@
                     <p style="font-style: italic">Please fill in the below details to register for an account</p>
                     <div class="form-group">
                         <div class="input-group">
-                            <label for="name">First Name:</label>
-                            <input type=text" id="fname" name="firstName">
-                        </div>
-                        <div class="input-group">
-                            <label for="name">Last Name:</label>
-                            <input type=text" id="lname" name="lastName">
+                            <label for="name">Name:</label>
+                            <input type=text" id="fname" name="name">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <label for="address">Address:</label>
                             <input type=text" id="address" name="address">
-                        </div>
-                        <div class="input-group">
-                            <label for="address">Post-Code:</label>
-                            <input type=text" id="postcode" name="postcode">
                         </div>
                     </div>
                     <div class="input-group">

@@ -3,20 +3,18 @@
     Created on : 26 Mar 2024, 10:34:47 am
     Author     : thebigmoney
 --%>
-
+<%@page import="iot.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String email = request.getParameter("email");
     String password = request.getParameter("password");
-    boolean isRegister = request.getParameter("firstName") != null;
+    boolean isRegister = request.getParameter("name") != null;
     
-    String fname = "", lname = "", address = "", postcode = "";
+    String name = "", address = "";
     
     if (isRegister){
-        fname = request.getParameter("firstName");
-        lname = request.getParameter("lastName");
-        address = request.getParameter("address");
-        postcode = request.getParameter("postcode");   
+        name = request.getParameter("name");
+        address = request.getParameter("address");  
     }
 %>    
 <!DOCTYPE html>
@@ -33,9 +31,8 @@
                 <%
                     if (isRegister){ %>
                         <div>
-                            <p>Thanks for registering <%= fname%></p>
+                            <p>Thanks for registering <%= name %></p>
                             <p>Address: <%= address %></p>
-                            <p>Postcode: <%= postcode %></p>
                             <p>Email: <%= email %></p>
                         </div>
                     <% } else { %>
@@ -45,8 +42,15 @@
                 <%}%>
             </div>
             <div>
-                <a href="index.jsp" class="custom-logout-button" style="margin-top: 60px;">Logout</a>
+                <a href="index.jsp" class="custom-button" style="margin-top: 60px;">Home</a>
+<!--                <a href="main.jsp" class="custom-button" style="margin-top: 60px;">Main</a>-->
             </div>
         </div>
+        <%
+            if (isRegister){
+                User user = new User(name, email, password, address);
+                session.setAttribute("user", user);
+            }
+        %>
     </body>
 </html>
