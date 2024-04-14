@@ -10,31 +10,38 @@
     <body>
         <%
           User user = (User)session.getAttribute("user");
-          System.out.println(user.email);
-          System.out.println(user.password);
           String email = request.getParameter("email");
           String password = request.getParameter("password");
-          System.out.println(email);
-          System.out.println(password);
         %>
     <div class="main-container">
-        <% if (user != null && user.email.equals(email) && user.password.equals(password)) { %>
-            <h1>User Profile</h1>
-            <table class="user-table" id="profile_table">
-                <thead><th>Name</th><th>Email</th><th>Password</th><th>Address</th>
+        <% if (user.email.equals(email) && user.password.equals(password) || user.loggedin == true) {
+            user.loggedin = true;
+        %>
+        <h2>User Profile</h2>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>${user.name}</td>
                     <td>${user.email}</td>
                     <td>${user.password}</td>
                     <td>${user.address}</td>
                 </tr>
-            </table>
-            <a href="logout.jsp" class="custom-logout-button" style="margin-top: 60px;">Logout</a>
-            <a href="index.jsp" class="custom-button" style="margin-top: 60px;">Home</a>
+            </tbody>
+        </table>
+        <a href="index.jsp" class="custom-button" style="margin-top: 60px;">Home</a>
+        <a href="logout.jsp" class="custom-logout-button" style="margin-top: 60px;">Logout</a>
+    
         <% } else { %>
             <h1>Invalid details please try again<h1>
-        <% } %>
-        
+        <% } %>   
     </div>
     </body>
 </html>

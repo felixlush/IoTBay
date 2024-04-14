@@ -15,15 +15,13 @@
     </head>
     <body>
         <div class="main-container">
-            <h1>Logged Out</h1>
+            <h1>You have been logged out</h1>
             <%
+              User user = (User)session.getAttribute("user");
+              user.loggedin = false;
               session.invalidate();
             %>
             <a href="index.jsp" class="custom-button" style="margin-top: 60px;">Home</a>
-    <!--        <h1>User Profile</h1>
-            <table id="profile_table">
-                <thead><th>Name</th><th>Email</th><th>Password</th><th>Address</th>
-            </table>-->
         </div>
     </body>
 </html>

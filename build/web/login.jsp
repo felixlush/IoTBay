@@ -32,7 +32,7 @@
                     </form>
                 </div>
             <% } else { %>
-                <h1>No users saved please register account</h1>
+                <h3>No users saved please register account</h3>
                 <a href="register.jsp" class="custom-button" style="margin-top: 60px;">Register</a>
                 <a href="index.jsp" class="custom-button" style="margin-top: 60px;">Home</a>
              <% }   %>

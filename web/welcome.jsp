@@ -42,7 +42,7 @@
                 <%}%>
             </div>
             <div>
-                <a href="index.jsp" class="custom-button" style="margin-top: 60px;">Home</a>
+                <a href="index.jsp" class="custom-button">Home</a>
 <!--                <a href="main.jsp" class="custom-button" style="margin-top: 60px;">Main</a>-->
             </div>
         </div>

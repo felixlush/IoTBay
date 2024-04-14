@@ -17,6 +17,7 @@ public class User {
     private String cardExpiryDate;
     private int cardCVV;
     private String[] searchHistory;
+    public boolean loggedin;
     
     
     //insert a contructor
@@ -31,6 +32,7 @@ public class User {
         this.cardCVV = 0;
         this.cardExpiryDate = null;
         this.searchHistory = null;
+        this.loggedin = false;
     }
 
     public String getName() {

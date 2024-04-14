@@ -13,6 +13,7 @@ body, html{
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #1e90ff, #87cefa, #ffffff);
 }
 
 h2, h3{
@@ -21,6 +22,10 @@ h2, h3{
 
 .main-container{
     text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 20px
 }
 
 .option-card{
@@ -38,35 +43,6 @@ h2, h3{
 
 .option p{
     font-size: 12px;
-}
-
-.custom-button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-
-.custom-logout-button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
 .form-card {
@@ -99,11 +75,66 @@ h2, h3{
     text-align: left; /* Ensures text is left-aligned */
 }
 
-.user-table{
+.user-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    font-family: sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%; 
+    background-color: #f3f3f3; /* Adds a light background color */
+}
+
+.user-table thead th {
+    background-color: #3498db; 
+    color: #ffffff; 
+    text-align: left; 
+    padding: 12px 15px; 
+}
+
+.user-table tbody td {
+    padding: 12px 15px; 
+    border-bottom: 1px solid #dddddd; 
+}
+
+.user-table tbody tr:last-of-type {
+    border-bottom: 2px solid #3498db; 
+}
+
+.custom-button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #3498db; 
+    color: white; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+    display: inline-block; 
+    cursor: pointer; 
+}
+
+.custom-button:hover, .custom-button:focus {
+    background-color: #2980b9; 
+    color: #ffffff; 
+}
+
+.custom-logout-button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #df2037;
+    color: white; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+    display: inline-block; 
+    cursor: pointer; 
+}
+
+.custom-logout-button:hover, .custom-logout-button:focus {
+    background-color: #d32032;
+    color: #ffffff; 
 }

@@ -15,7 +15,7 @@
     <body>
         <div class="main-container">
             <div class="form-card">
-                <h2>Register:</h2>
+                <h2>Register:</h2>           
                 <form action="welcome.jsp" method="post">
                     <p style="font-style: italic">Please fill in the below details to register for an account</p>
                     <div class="form-group">
@@ -42,8 +42,9 @@
                         <input type="password" id="password" name="password">
                     </div>
                     
-                    <div class="form-group">    
-                        <input type="submit" value="Submit" style="margin-top: 20px;">
+                    <div class="form-group" style="margin-top: 20px;">    
+                        <input type="submit" value="Submit">
+                         <a href="index.jsp" class="custom-button">Back</a>
                     </div>
                 </form>
             </div>
